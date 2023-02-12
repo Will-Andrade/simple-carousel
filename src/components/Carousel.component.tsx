@@ -17,13 +17,25 @@ export default function CarouselComponent({
   return (<div className='container' data-testid="carousel">
     <h1>React Carousel</h1>
     <div className='carousel-controls'>
-      <button type='button' onClick={handleClickPrev}>Prev</button>
-      <button type='button' onClick={handleClickNext}>Next</button>
+      <button 
+        type='button' 
+        onClick={handleClickPrev} 
+        data-testid='prev-btn'
+      >
+        Prev
+      </button>
+      <button 
+        type='button' 
+        onClick={handleClickNext} 
+        data-testid='next-btn'
+      >
+        Next
+      </button>
     </div>
     <div className='images-container'>
       {carouselImages.map(({ id, download_url, author, width, height }) =>
-        currentSlide === id && (
-          <div key={id}>
+        currentSlide === Number(id) && (
+          <div key={id} data-testid={`slide-${id}`}>
             <img src={download_url} alt={author} width={width} height={height} />
           </div>
         )

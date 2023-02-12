@@ -7,4 +7,4 @@ export type ResponseObj = {
   download_url: string;
 };
 
-export type CarouselItemType = Omit<ResponseObj, 'url'> & { id: number; };
+export type CarouselItemType = Omit<ResponseObj, 'url'>;

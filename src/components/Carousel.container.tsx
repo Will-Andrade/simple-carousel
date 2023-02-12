@@ -17,7 +17,7 @@ export default function CarouselContainer() {
         const imagesData = treatedData.reduce((acc: CarouselItemType[], image: ResponseObj) => {
           return [
             ...acc, {
-              id: Number(image.id),
+              id: image.id,
               author: image.author,
               width: image.width,
               height: image.height,
