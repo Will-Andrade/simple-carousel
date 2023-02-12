@@ -8,5 +8,5 @@ describe('App component', () => {
 
     const carousel = screen.getByTestId('carousel');
     expect(carousel).toBeInTheDocument();
-  })
+  });
 });
